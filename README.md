@@ -1,0 +1,3 @@
+# WatchMotion
+
+watchOS CoreMotion framework.
