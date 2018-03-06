@@ -11,11 +11,50 @@
 		35170B5B204D46AB00228ABB /* Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35170B5A204D46AB00228ABB /* Motion.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		358BA1E1204E330F00A6EAFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 358BA17E204E32E000A6EAFB;
+			remoteInfo = AppleWatchTestApp;
+		};
+		358BA1E3204E330F00A6EAFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 358BA192204E32E000A6EAFB;
+			remoteInfo = AppleWatchTestAppTests;
+		};
+		358BA1E5204E330F00A6EAFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 358BA19D204E32E000A6EAFB;
+			remoteInfo = AppleWatchTestAppUITests;
+		};
+		358BA1E7204E330F00A6EAFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 358BA1A6204E32E000A6EAFB;
+			remoteInfo = "AppleWatchTestApp WatchKit App";
+		};
+		358BA1E9204E330F00A6EAFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 358BA1B5204E32E000A6EAFB;
+			remoteInfo = "AppleWatchTestApp WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		35170B4F204D468C00228ABB /* watchOSMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = watchOSMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35170B52204D468C00228ABB /* watchOSMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = watchOSMotion.h; sourceTree = "<group>"; };
 		35170B53204D468C00228ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35170B5A204D46AB00228ABB /* Motion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motion.swift; sourceTree = "<group>"; };
+		358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppleWatchTestApp.xcodeproj; path = ../AppleWatchTestApp/AppleWatchTestApp.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +71,7 @@
 		35170B45204D468C00228ABB = {
 			isa = PBXGroup;
 			children = (
+				358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */,
 				35170B51204D468C00228ABB /* watchOSMotion */,
 				35170B50204D468C00228ABB /* Products */,
 			);
@@ -53,6 +93,18 @@
 				35170B5A204D46AB00228ABB /* Motion.swift */,
 			);
 			path = watchOSMotion;
+			sourceTree = "<group>";
+		};
+		358BA1DA204E330F00A6EAFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				358BA1E2204E330F00A6EAFB /* AppleWatchTestApp.app */,
+				358BA1E4204E330F00A6EAFB /* AppleWatchTestAppTests.xctest */,
+				358BA1E6204E330F00A6EAFB /* AppleWatchTestAppUITests.xctest */,
+				358BA1E8204E330F00A6EAFB /* AppleWatchTestApp WatchKit App.app */,
+				358BA1EA204E330F00A6EAFB /* AppleWatchTestApp WatchKit Extension.appex */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,12 +165,56 @@
 			mainGroup = 35170B45204D468C00228ABB;
 			productRefGroup = 35170B50204D468C00228ABB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 358BA1DA204E330F00A6EAFB /* Products */;
+					ProjectRef = 358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				35170B4E204D468C00228ABB /* watchOSMotion */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		358BA1E2204E330F00A6EAFB /* AppleWatchTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AppleWatchTestApp.app;
+			remoteRef = 358BA1E1204E330F00A6EAFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		358BA1E4204E330F00A6EAFB /* AppleWatchTestAppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppleWatchTestAppTests.xctest;
+			remoteRef = 358BA1E3204E330F00A6EAFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		358BA1E6204E330F00A6EAFB /* AppleWatchTestAppUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppleWatchTestAppUITests.xctest;
+			remoteRef = 358BA1E5204E330F00A6EAFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		358BA1E8204E330F00A6EAFB /* AppleWatchTestApp WatchKit App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "AppleWatchTestApp WatchKit App.app";
+			remoteRef = 358BA1E7204E330F00A6EAFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		358BA1EA204E330F00A6EAFB /* AppleWatchTestApp WatchKit Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "AppleWatchTestApp WatchKit Extension.appex";
+			remoteRef = 358BA1E9204E330F00A6EAFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		35170B4D204D468C00228ABB /* Resources */ = {
@@ -273,6 +369,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -295,6 +392,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
