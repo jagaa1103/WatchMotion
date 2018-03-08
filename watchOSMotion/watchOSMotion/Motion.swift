@@ -11,18 +11,16 @@ import CoreMotion
 
 public class Motion{
     let motionManager = CMMotionManager()
-    var motionSupport = false
     public init() {
         print("Motion inited")
     }
     
     public func motionAvailableCheck() -> Bool {
-        motionSupport = motionManager.isDeviceMotionAvailable
-        return motionSupport
+        return motionManager.isDeviceMotionAvailable
     }
-    //  Accelerometer data start
+    //  Accelerometer start
     public func startAccel(){
-        if !motionSupport {
+        if !motionAvailableCheck() {
             return
         }
         motionManager.accelerometerUpdateInterval = 0.01
@@ -32,24 +30,28 @@ public class Motion{
             }
         })
     }
+    //  Gyroscope start
     public func startGyro(){
-        if !motionSupport {
+        if !motionAvailableCheck() {
             return
         }
-        motionManager.gyroUpdateInterval = 0.01
-        motionManager.startGyroUpdates(to: OperationQueue.main, withHandler: { (gyroData, error) in
-            if error == nil, let data = gyroData {
-                print("gyro_x : \(data.rotationRate.x), gyro_y : \(data.rotationRate.y), gyro_z : \(data.rotationRate.z)")
-            }
-        })
+        if motionManager.isGyroAvailable {
+            motionManager.gyroUpdateInterval = 0.01
+            motionManager.startGyroUpdates(to: OperationQueue.main, withHandler: { (gyroData: CMGyroData?, error: Error?) in
+                if error == nil, let data = gyroData {
+                    print("gyro_x : \(data.rotationRate.x), gyro_y : \(data.rotationRate.y), gyro_z : \(data.rotationRate.z)")
+                }
+            })
+        }else{
+            print("GyroScope is not support")
+        }
     }
-    //  DeviceMotion data start
+    //  DeviceMotion start
     public func startMotion(){
-        print("startMotion")
-        if !motionSupport {
+        if !motionAvailableCheck() {
             return
         }
-        motionManager.deviceMotionUpdateInterval = 1.0
+        motionManager.deviceMotionUpdateInterval = 0.01
         motionManager.startDeviceMotionUpdates(to: OperationQueue.main) { (motionData: CMDeviceMotion?, error: Error?) in
             if error == nil, let data = motionData {
                 print("pitch: \(data.attitude.pitch), yaw: \(data.attitude.yaw), roll: \(data.attitude.roll)")
