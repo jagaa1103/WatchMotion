@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356E360720512E9F002E25FF /* watchOSMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356E360620512E9F002E25FF /* watchOSMotion.framework */; };
+		356E360820512E9F002E25FF /* watchOSMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 356E360620512E9F002E25FF /* watchOSMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		358BA182204E32E000A6EAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA181204E32E000A6EAFB /* AppDelegate.swift */; };
 		358BA184204E32E000A6EAFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA183204E32E000A6EAFB /* ViewController.swift */; };
 		358BA187204E32E000A6EAFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358BA185204E32E000A6EAFB /* Main.storyboard */; };
@@ -22,8 +24,6 @@
 		358BA1BD204E32E000A6EAFB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA1BC204E32E000A6EAFB /* ExtensionDelegate.swift */; };
 		358BA1BF204E32E000A6EAFB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA1BE204E32E000A6EAFB /* NotificationController.swift */; };
 		358BA1C1204E32E000A6EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358BA1C0204E32E000A6EAFB /* Assets.xcassets */; };
-		358BA1FA204E4F5A00A6EAFB /* watchOSMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358BA1F9204E4F5A00A6EAFB /* watchOSMotion.framework */; };
-		358BA1FB204E4F5A00A6EAFB /* watchOSMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 358BA1F9204E4F5A00A6EAFB /* watchOSMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				358BA1FB204E4F5A00A6EAFB /* watchOSMotion.framework in Embed Frameworks */,
+				356E360820512E9F002E25FF /* watchOSMotion.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		356E360620512E9F002E25FF /* watchOSMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = watchOSMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		358BA17E204E32E000A6EAFB /* AppleWatchTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		358BA181204E32E000A6EAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		358BA183204E32E000A6EAFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		358BA1C0204E32E000A6EAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		358BA1C2204E32E000A6EAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		358BA1C3204E32E000A6EAFB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		358BA1F9204E4F5A00A6EAFB /* watchOSMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = watchOSMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				358BA1FA204E4F5A00A6EAFB /* watchOSMotion.framework in Frameworks */,
+				356E360720512E9F002E25FF /* watchOSMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +157,7 @@
 		358BA175204E32E000A6EAFB = {
 			isa = PBXGroup;
 			children = (
-				358BA1F9204E4F5A00A6EAFB /* watchOSMotion.framework */,
+				356E360620512E9F002E25FF /* watchOSMotion.framework */,
 				358BA180204E32E000A6EAFB /* AppleWatchTestApp */,
 				358BA195204E32E000A6EAFB /* AppleWatchTestAppTests */,
 				358BA1A0204E32E000A6EAFB /* AppleWatchTestAppUITests */,

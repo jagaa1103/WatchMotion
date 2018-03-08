@@ -9,13 +9,14 @@
 import WatchKit
 import Foundation
 import watchOSMotion
+import CoreMotion
 
 
 class InterfaceController: WKInterfaceController {
-
+    
+    let motion = Motion()
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         // Configure interface objects here.
     }
     
@@ -30,7 +31,15 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func startAccelerometer() {
-        let motion = Motion()
         motion.startAccel()
+    }
+    @IBAction func startGyroscope() {
+        motion.startGyro()
+    }
+    @IBAction func startMotiondata() {
+        motion.startMotion()
+    }
+    @IBAction func stopMotion() {
+        motion.stopAll()
     }
 }

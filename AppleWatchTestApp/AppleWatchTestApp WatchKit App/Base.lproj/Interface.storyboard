@@ -15,9 +15,24 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AppleWatchTestApp_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="136" alignment="center" text="Motion Test app" textAlignment="center" id="1DV-Qn-tB5"/>
-                        <button width="1" alignment="center" title="start Accelerometer" id="4RX-3P-EXw">
+                        <button width="1" alignment="center" title="Acceleromter" id="4RX-3P-EXw">
                             <connections>
-                                <action selector="startAccelerometer" destination="AgC-eL-Hgc" id="eXs-p6-KPB"/>
+                                <action selector="startAccelerometer" destination="AgC-eL-Hgc" id="8hp-MB-z4m"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Gyroscope" id="w3d-7d-E9z">
+                            <connections>
+                                <action selector="startGyroscope" destination="AgC-eL-Hgc" id="773-w5-B6B"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Motion Data" id="Ngq-se-9Tc">
+                            <connections>
+                                <action selector="startMotiondata" destination="AgC-eL-Hgc" id="510-VK-SQ9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Stop" id="hBs-se-7mf">
+                            <connections>
+                                <action selector="stopMotion" destination="AgC-eL-Hgc" id="wX5-gj-ZnU"/>
                             </connections>
                         </button>
                     </items>
