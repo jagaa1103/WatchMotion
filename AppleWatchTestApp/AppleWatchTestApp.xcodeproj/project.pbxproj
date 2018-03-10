@@ -24,6 +24,7 @@
 		358BA1BD204E32E000A6EAFB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA1BC204E32E000A6EAFB /* ExtensionDelegate.swift */; };
 		358BA1BF204E32E000A6EAFB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA1BE204E32E000A6EAFB /* NotificationController.swift */; };
 		358BA1C1204E32E000A6EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358BA1C0204E32E000A6EAFB /* Assets.xcassets */; };
+		35AA8A8B20521E30008AC88E /* MotionSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA8A8A20521E30008AC88E /* MotionSceneController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		358BA1C0204E32E000A6EAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		358BA1C2204E32E000A6EAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		358BA1C3204E32E000A6EAFB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		35AA8A8A20521E30008AC88E /* MotionSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSceneController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			children = (
 				358BA181204E32E000A6EAFB /* AppDelegate.swift */,
 				358BA183204E32E000A6EAFB /* ViewController.swift */,
+				35AA8A8A20521E30008AC88E /* MotionSceneController.swift */,
 				358BA185204E32E000A6EAFB /* Main.storyboard */,
 				358BA188204E32E000A6EAFB /* Assets.xcassets */,
 				358BA18A204E32E000A6EAFB /* LaunchScreen.storyboard */,
@@ -433,6 +436,7 @@
 			files = (
 				358BA184204E32E000A6EAFB /* ViewController.swift in Sources */,
 				358BA182204E32E000A6EAFB /* AppDelegate.swift in Sources */,
+				35AA8A8B20521E30008AC88E /* MotionSceneController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

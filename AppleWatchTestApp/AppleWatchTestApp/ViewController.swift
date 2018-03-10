@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    @IBAction func startMotionScene(_ sender: Any) {
+        let motionScene = self.storyboard?.instantiateViewController(withIdentifier: "MotionScene")
+        if motionScene != nil {
+            self.present(motionScene!, animated: true, completion: nil)
+        }
+    }
 }
 
