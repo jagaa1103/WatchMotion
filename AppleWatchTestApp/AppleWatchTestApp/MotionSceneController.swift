@@ -28,7 +28,7 @@ class MotionSceneController: UIViewController {
     func initSceneView(size: CGRect){
         sceneView.autoenablesDefaultLighting = true
         sceneView.allowsCameraControl = true
-        let scene = SCNScene(named: "art.scnassets/MotionScene.scn")
+        let scene = SCNScene(named: "MotionScene.scn")
         sceneView.scene = scene
         let node = getBox()
         scene?.rootNode.addChildNode(node)

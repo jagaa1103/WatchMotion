@@ -14,28 +14,26 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AppleWatchTestApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" alignment="center" text="Motion Test app" textAlignment="center" id="1DV-Qn-tB5"/>
-                        <button width="1" alignment="center" title="Acceleromter" id="4RX-3P-EXw">
+                        <label width="136" alignment="center" text="state: " textAlignment="center" id="1DV-Qn-tB5"/>
+                        <button width="1" alignment="left" title="send message" id="SO3-TG-hG4">
                             <connections>
-                                <action selector="startAccelerometer" destination="AgC-eL-Hgc" id="8hp-MB-z4m"/>
+                                <action selector="sendMessage" destination="AgC-eL-Hgc" id="VCL-k8-nCW"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Gyroscope" id="w3d-7d-E9z">
+                        <button width="1" alignment="center" title="start Workout" id="4RX-3P-EXw">
                             <connections>
-                                <action selector="startGyroscope" destination="AgC-eL-Hgc" id="773-w5-B6B"/>
+                                <action selector="startWorkout" destination="AgC-eL-Hgc" id="5eZ-a7-Kzb"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Motion Data" id="Ngq-se-9Tc">
+                        <button width="1" alignment="left" title="stop Workout" id="hBs-se-7mf">
                             <connections>
-                                <action selector="startMotiondata" destination="AgC-eL-Hgc" id="510-VK-SQ9"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Stop" id="hBs-se-7mf">
-                            <connections>
-                                <action selector="stopMotion" destination="AgC-eL-Hgc" id="wX5-gj-ZnU"/>
+                                <action selector="stopWorkout" destination="AgC-eL-Hgc" id="xHb-n2-XjI"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="connectionStateLabel" destination="1DV-Qn-tB5" id="lPo-Di-nWy"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

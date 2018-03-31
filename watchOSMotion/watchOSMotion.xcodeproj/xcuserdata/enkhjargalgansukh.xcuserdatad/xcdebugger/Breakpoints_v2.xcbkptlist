@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../AppleWatchTestApp/AppleWatchTestApp WatchKit Extension/InterfaceController.swift"
-            timestampString = "542194255.172374"
+            timestampString = "544175841.413995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "startGyroscope()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "sendMessage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -9,15 +9,17 @@
 import WatchKit
 import Foundation
 import watchOSMotion
-import CoreMotion
-
 
 class InterfaceController: WKInterfaceController {
     
-    let motion = Motion()
+    let connectionService = ConnectionService()
+    let workoutManager = WorkoutManager()
+    
+    @IBOutlet var connectionStateLabel: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        // Configure interface objects here.
+        connectionStateLabel.setText("disconnected")
+        connectionService.start(ctrl: self)
     }
     
     override func willActivate() {
@@ -30,16 +32,25 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    @IBAction func startAccelerometer() {
-        motion.startAccel()
+    @IBAction func sendMessage() {
+        connectionService.sendToPhone(message: "Hello my Phone :)")
     }
-    @IBAction func startGyroscope() {
-        motion.startGyro()
+    @IBAction func startWorkout() {
+        workoutManager.startWorkout()
     }
-    @IBAction func startMotiondata() {
-        motion.startMotion()
+    
+    @IBAction func stopWorkout() {
+        workoutManager.stopWorkout()
     }
-    @IBAction func stopMotion() {
-        motion.stopAll()
+    
+    func onConnectionState(state: Bool){
+        print("onConnectionState: \(state)")
+        WKInterfaceDevice.current().play(.notification)
+        if state {
+            connectionStateLabel.setText("connected")
+        }else{
+            connectionStateLabel.setText("disconnected")
+        }
     }
+    
 }

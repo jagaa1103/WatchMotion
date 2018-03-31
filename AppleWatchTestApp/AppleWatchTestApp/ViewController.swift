@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let watchConnection = WatchConnection()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        watchConnection.start()
     }
 
     override func didReceiveMemoryWarning() {
