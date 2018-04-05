@@ -31,16 +31,15 @@ public class WorkoutManager: MotionProtocol {
             fatalError("Workout Session cannot started")
         }
         healthStore.start(session!)
-        motionManager.startAccel()
+        motionManager.startMotion()
     }
     public func stopWorkout(){
-        motionManager.stopAll()
-        healthStore.end(session!)
+        motionManager.stopMotion()
+        if(session != nil){ healthStore.end(session!) }
         session = nil
     }
     
-    
-    public func onMotionChanged(data: Accel) {
+    func onMotionChanged(data: MotionData) {
         data.printLog()
     }
     

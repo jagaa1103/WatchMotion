@@ -12,7 +12,9 @@ import CoreMotion
 class MotionManager {
     
     let motionManager = CMMotionManager()
+    let swingManager = SwingManager()
     var delegate: MotionProtocol?
+    var treshArray = [Accel]()
     
     func motionAvailableCheck() -> Bool {
         return motionManager.isDeviceMotionAvailable
@@ -20,8 +22,8 @@ class MotionManager {
     
     func startAll(){
         if !motionAvailableCheck() { return }
-        startAccel()
-        startGyro()
+//        startAccel()
+//        startGyro()
         startMotion()
     }
     
@@ -54,10 +56,13 @@ class MotionManager {
         motionManager.deviceMotionUpdateInterval = 0.01
         motionManager.startDeviceMotionUpdates(to: OperationQueue.main) { (motionData: CMDeviceMotion?, error: Error?) in
             if error == nil, let data = motionData {
-                let motion = Motion(yaw: data.attitude.yaw, pitch: data.attitude.pitch, roll: data.attitude.roll)
-                motion.printLog()
+                let sensorData = MotionData(acc_x: data.userAcceleration.x, acc_y: data.userAcceleration.y, acc_z: data.userAcceleration.z, gyro_x: data.rotationRate.x, gyro_y: data.rotationRate.y, gyro_z: data.rotationRate.z)
+                self.swingManager.collectSwingData(data: sensorData)
             }
         }
+    }
+    func stopMotion(){
+        motionManager.stopDeviceMotionUpdates()
     }
     
     func stopAll(){
@@ -65,4 +70,5 @@ class MotionManager {
         motionManager.stopGyroUpdates()
         motionManager.stopDeviceMotionUpdates()
     }
+    
 }

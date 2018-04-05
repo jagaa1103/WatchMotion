@@ -32,16 +32,24 @@ public struct Motion {
     var yaw: Double
     var pitch: Double
     var roll: Double
-//    init(yaw: Double, pitch: Double, roll: Double) {
-//        self.yaw = yaw
-//        self.pitch = pitch
-//        self.roll = roll
-//    }
     func printLog(){
         print("Motion: \(yaw), \(pitch), \(roll)")
     }
 }
 
-public protocol MotionProtocol {
-    func onMotionChanged(data: Accel)
+struct MotionData {
+    var acc_x: Double
+    var acc_y: Double
+    var acc_z: Double
+    var gyro_x: Double
+    var gyro_y: Double
+    var gyro_z: Double
+    func printLog(){
+        print("acc_x: \(acc_x), acc_y: \(acc_y), acc_z: \(acc_z), gyro_x: \(gyro_x), gyro_y: \(gyro_y), gyro_z: \(gyro_z)")
+    }
+}
+
+
+protocol MotionProtocol {
+    func onMotionChanged(data: MotionData)
 }
