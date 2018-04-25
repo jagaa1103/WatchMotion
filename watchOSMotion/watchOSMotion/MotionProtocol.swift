@@ -6,50 +6,22 @@
 //  Copyright © 2018 Enkhjargal Gansukh. All rights reserved.
 //
 
-import Foundation
+import CoreMotion
 
-public struct Accel {
-    var x: Double
-    var y: Double
-    var z: Double
-    
-    func printLog(){
-        print("Accel: \(x), \(y), \(z)")
+
+public struct MotionData {
+    var accel: CMAcceleration
+    var gyro: CMRotationRate
+    var quaternion: CMQuaternion
+    public func printLog(){
+        print("ax: \(accel.x), ay: \(accel.y), az: \(accel.z), gx: \(gyro.x), gy: \(gyro.y), gz: \(gyro.z), qx: \(quaternion.x), qy: \(quaternion.y),qz: \(quaternion.z),qw: \(quaternion.w)")
     }
-}
-
-public struct Gyro {
-    var x: Double
-    var y: Double
-    var z: Double
-    
-    func printLog(){
-        print("Gyro: \(x), \(y), \(z)")
-    }
-}
-
-public struct Motion {
-    var yaw: Double
-    var pitch: Double
-    var roll: Double
-    func printLog(){
-        print("Motion: \(yaw), \(pitch), \(roll)")
-    }
-}
-
-struct MotionData {
-    var acc_x: Double
-    var acc_y: Double
-    var acc_z: Double
-    var gyro_x: Double
-    var gyro_y: Double
-    var gyro_z: Double
-    func printLog(){
-        print("acc_x: \(acc_x), acc_y: \(acc_y), acc_z: \(acc_z), gyro_x: \(gyro_x), gyro_y: \(gyro_y), gyro_z: \(gyro_z)")
+    public func isReadyAngle() -> Bool {
+        if(accel.x > 0.7 &&  -0.2 < accel.y && accel.y < 0.5 && -0.3 < accel.z && accel.z < 0.5) { return true } else { return false }
     }
 }
 
 
-protocol MotionProtocol {
+public protocol MotionProtocol {
     func onMotionChanged(data: MotionData)
 }

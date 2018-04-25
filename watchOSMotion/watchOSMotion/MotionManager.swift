@@ -9,12 +9,9 @@
 import Foundation
 import CoreMotion
 
-class MotionManager {
-    
+class MotionManager{
     let motionManager = CMMotionManager()
-    let swingManager = SwingManager()
     var delegate: MotionProtocol?
-    var treshArray = [Accel]()
     
     func motionAvailableCheck() -> Bool {
         return motionManager.isDeviceMotionAvailable
@@ -22,8 +19,6 @@ class MotionManager {
     
     func startAll(){
         if !motionAvailableCheck() { return }
-//        startAccel()
-//        startGyro()
         startMotion()
     }
     
@@ -32,8 +27,7 @@ class MotionManager {
         motionManager.accelerometerUpdateInterval = 0.01
         motionManager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: { (accelData: CMAccelerometerData?, error: Error?) -> Void in
             if error == nil, let data = accelData {
-                let accel = Accel(x: data.acceleration.x, y: data.acceleration.y, z: data.acceleration.z)
-                accel.printLog()
+                print("accel: x: \(data.acceleration.x), y: \(data.acceleration.y), z: \(data.acceleration.z)")
             }
         })
     }
@@ -43,8 +37,7 @@ class MotionManager {
             motionManager.gyroUpdateInterval = 0.01
             motionManager.startGyroUpdates(to: OperationQueue.main, withHandler: { (gyroData: CMGyroData?, error: Error?) in
                 if error == nil, let data = gyroData {
-                    let gyro = Gyro(x: data.rotationRate.x, y: data.rotationRate.y, z: data.rotationRate.z)
-                    gyro.printLog()
+                    print("gyro: x: \(data.rotationRate.x), y: \(data.rotationRate.y), z: \(data.rotationRate.z)")
                 }
             })
         }else{
@@ -56,8 +49,8 @@ class MotionManager {
         motionManager.deviceMotionUpdateInterval = 0.01
         motionManager.startDeviceMotionUpdates(to: OperationQueue.main) { (motionData: CMDeviceMotion?, error: Error?) in
             if error == nil, let data = motionData {
-                let sensorData = MotionData(acc_x: data.userAcceleration.x, acc_y: data.userAcceleration.y, acc_z: data.userAcceleration.z, gyro_x: data.rotationRate.x, gyro_y: data.rotationRate.y, gyro_z: data.rotationRate.z)
-                self.swingManager.collectSwingData(data: sensorData)
+                let sensorData = MotionData(accel: data.gravity, gyro: data.rotationRate, quaternion: data.attitude.quaternion)
+                self.delegate?.onMotionChanged(data: sensorData)
             }
         }
     }

@@ -10,37 +10,39 @@ import WatchKit
 import Foundation
 import watchOSMotion
 
-class InterfaceController: WKInterfaceController {
-    
+class InterfaceController: WKInterfaceController, SwingProtocol {
     let connectionService = ConnectionService()
-    let workoutManager = WorkoutManager()
+    let swingManager = SwingManager()
     
     @IBOutlet var connectionStateLabel: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        swingManager.delegate = self
         connectionStateLabel.setText("disconnected")
         connectionService.start(ctrl: self)
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 
     @IBAction func sendMessage() {
-        connectionService.sendToPhone(message: "Hello my Phone :)")
+        do {
+            try connectionService.sendToPhone(header: "Greeting", message: "watch")
+        } catch {
+            print("Error >> sendMessage")
+        }
     }
     @IBAction func startWorkout() {
-        workoutManager.startWorkout()
+        swingManager.start()
     }
     
     @IBAction func stopWorkout() {
-        workoutManager.stopWorkout()
+        swingManager.stop()
     }
     
     func onConnectionState(state: Bool){
@@ -53,4 +55,15 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
+//  ============= Swing Detection Protocol Events =============
+//  ===========================================================
+    func onReady() {
+        print("Ready")
+    }
+    
+    func onSwing() {
+        print("onSwing")
+    }
+//  ===========================================================
+//  ===========================================================
 }

@@ -29,6 +29,8 @@
 		358BA1BF204E32E000A6EAFB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA1BE204E32E000A6EAFB /* NotificationController.swift */; };
 		358BA1C1204E32E000A6EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358BA1C0204E32E000A6EAFB /* Assets.xcassets */; };
 		35AA8A8B20521E30008AC88E /* MotionSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA8A8A20521E30008AC88E /* MotionSceneController.swift */; };
+		35B618982090735A001AB046 /* SwingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B618922090735A001AB046 /* SwingManager.swift */; };
+		35B6189A20907820001AB046 /* SwingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6189920907820001AB046 /* SwingProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		358BA1C2204E32E000A6EAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		358BA1C3204E32E000A6EAFB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		35AA8A8A20521E30008AC88E /* MotionSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSceneController.swift; sourceTree = "<group>"; };
+		35B618922090735A001AB046 /* SwingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingManager.swift; sourceTree = "<group>"; };
+		35B6189920907820001AB046 /* SwingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,15 +260,33 @@
 			isa = PBXGroup;
 			children = (
 				355FB351206F60B00056BF44 /* AppleWatchTestApp WatchKit Extension.entitlements */,
+				35B6189E20907B5B001AB046 /* Connection */,
+				35B6189D20907B41001AB046 /* Swing */,
 				358BA1BA204E32E000A6EAFB /* InterfaceController.swift */,
 				358BA1BC204E32E000A6EAFB /* ExtensionDelegate.swift */,
 				358BA1BE204E32E000A6EAFB /* NotificationController.swift */,
 				358BA1C0204E32E000A6EAFB /* Assets.xcassets */,
 				358BA1C2204E32E000A6EAFB /* Info.plist */,
 				358BA1C3204E32E000A6EAFB /* PushNotificationPayload.apns */,
-				350A250520539345004E6D11 /* ConnectionService.swift */,
 			);
 			path = "AppleWatchTestApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		35B6189D20907B41001AB046 /* Swing */ = {
+			isa = PBXGroup;
+			children = (
+				35B618922090735A001AB046 /* SwingManager.swift */,
+				35B6189920907820001AB046 /* SwingProtocol.swift */,
+			);
+			path = Swing;
+			sourceTree = "<group>";
+		};
+		35B6189E20907B5B001AB046 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				350A250520539345004E6D11 /* ConnectionService.swift */,
+			);
+			path = Connection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,10 +523,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B6189A20907820001AB046 /* SwingProtocol.swift in Sources */,
 				358BA1BF204E32E000A6EAFB /* NotificationController.swift in Sources */,
 				358BA1BD204E32E000A6EAFB /* ExtensionDelegate.swift in Sources */,
 				358BA1BB204E32E000A6EAFB /* InterfaceController.swift in Sources */,
 				350A250620539345004E6D11 /* ConnectionService.swift in Sources */,
+				35B618982090735A001AB046 /* SwingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

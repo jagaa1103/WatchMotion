@@ -11,6 +11,7 @@ import HealthKit
 
 public class WorkoutManager: MotionProtocol {
     
+    public var delegate: MotionProtocol?
     let motionManager = MotionManager()
     let healthStore = HKHealthStore()
     
@@ -39,8 +40,7 @@ public class WorkoutManager: MotionProtocol {
         session = nil
     }
     
-    func onMotionChanged(data: MotionData) {
-        data.printLog()
+    public func onMotionChanged(data: MotionData) {
+        delegate?.onMotionChanged(data: data)
     }
-    
 }

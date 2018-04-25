@@ -10,7 +10,6 @@
 		35170B54204D468C00228ABB /* watchOSMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 35170B52204D468C00228ABB /* watchOSMotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35170B5B204D46AB00228ABB /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35170B5A204D46AB00228ABB /* MotionManager.swift */; };
 		355FB34B206F583F0056BF44 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355FB34A206F583F0056BF44 /* WorkoutManager.swift */; };
-		35F1500F206F85ED00AA7702 /* SwingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1500E206F85ED00AA7702 /* SwingManager.swift */; };
 		35FDA45320590E9800D769B9 /* MotionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDA45220590E9800D769B9 /* MotionProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		35170B5A204D46AB00228ABB /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		355FB34A206F583F0056BF44 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		358BA1D9204E330F00A6EAFB /* AppleWatchTestApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppleWatchTestApp.xcodeproj; path = ../AppleWatchTestApp/AppleWatchTestApp.xcodeproj; sourceTree = "<group>"; };
-		35F1500E206F85ED00AA7702 /* SwingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingManager.swift; sourceTree = "<group>"; };
 		35FDA45220590E9800D769B9 /* MotionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 				35170B5A204D46AB00228ABB /* MotionManager.swift */,
 				35FDA45220590E9800D769B9 /* MotionProtocol.swift */,
 				355FB34A206F583F0056BF44 /* WorkoutManager.swift */,
-				35F1500E206F85ED00AA7702 /* SwingManager.swift */,
 			);
 			path = watchOSMotion;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F1500F206F85ED00AA7702 /* SwingManager.swift in Sources */,
 				35170B5B204D46AB00228ABB /* MotionManager.swift in Sources */,
 				35FDA45320590E9800D769B9 /* MotionProtocol.swift in Sources */,
 				355FB34B206F583F0056BF44 /* WorkoutManager.swift in Sources */,

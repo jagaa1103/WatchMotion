@@ -48,10 +48,8 @@ class ConnectionService: NSObject, WCSessionDelegate {
         print("sessionReachabilityDidChange : \(session)")
     }
     
-    func sendToPhone(message: String){
-        let msg = ["watch": message]
-        print("sendToPhone: \(msg)")
-        self.session.sendMessage(["watch": message], replyHandler: nil, errorHandler: nil)
+    func sendToPhone(header: String, message: String) throws {
+        self.session.sendMessage([header: message], replyHandler: nil, errorHandler: nil)
     }
     
 }
