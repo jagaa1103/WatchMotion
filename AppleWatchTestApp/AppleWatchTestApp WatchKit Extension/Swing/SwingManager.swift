@@ -30,31 +30,44 @@ public class SwingManager : MotionProtocol {
         workoutManager.stopWorkout()
     }
 
-    var isSwinging = false
+    var isReady = false
     var swingTimer: Timer!
-    func collectSwingData(data: MotionData){
-        if !isSwinging, checkReady(data: data) {
-            delegate?.onReady()
-            isSwinging = true
-            swingTimer = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false, block: { _ in
-                self.isSwinging = false
-                self.analyzeSwing()
-            })
-        }
-        if isSwinging {
-            swingData.append(data)
-        }
-    }
     
     func checkReady(data: MotionData) -> Bool {
-        if data.isReadyAngle() { readyTreshHold.append(data)
-        }else{  readyTreshHold.removeAll() }
-        if readyTreshHold.count > READY_CHECK_COUNTER { return true }
+        if( data.isReadyAngle() && !data.isMoving() ) { // Ready
+            readyTreshHold.append(data)
+        }else{ // Not Ready
+            readyTreshHold.removeAll()
+        }
+        if readyTreshHold.count > READY_CHECK_COUNTER {
+            delegate?.onReady()
+            return true
+        }
         return false
     }
     
+    func isSwinging()->Bool {
+        if(checkMovement()){
+            completion()
+        }
+        swingTimer = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false, block: { _ in
+            self.isSwinging = false
+            self.analyzeSwing()
+            self.workoutManager.stopWorkout()
+            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { _ in
+                self.workoutManager.startWorkout()
+            })
+        })
+    }
+    
+    func checkMovement()->Bool {
+        let d1 =
+        return false
+    }
+    
+    
     func reset(){
-        isSwinging = false
+        isSwing = false
         swingData.removeAll()
         swingTimer.invalidate()
     }
@@ -64,11 +77,20 @@ public class SwingManager : MotionProtocol {
         swingData.forEach({ data in
             data.printLog()
         })
+        delegate?.onSwing()
         print("================= finish Analyze Swing ==================")
         reset()
     }
     
     public func onMotionChanged(data: MotionData) {
-        collectSwingData(data: data)
+        if(isSwinging()){
+            collectSwingData(data: data)
+            return
+        }
+        isReady(data: data)
+    }
+    
+    func collectSwingData(data: MotionData){
+        swingData.append(data)
     }
 }
