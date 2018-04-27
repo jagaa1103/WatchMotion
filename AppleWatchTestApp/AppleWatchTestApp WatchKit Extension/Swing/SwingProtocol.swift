@@ -6,7 +6,9 @@
 //  Copyright © 2018 Enkhjargal Gansukh. All rights reserved.
 //
 
+import watchOSMotion
+
 protocol SwingProtocol {
     func onReady()
-    func onSwing()
+    func onSwing(dataList: [MotionData])
 }

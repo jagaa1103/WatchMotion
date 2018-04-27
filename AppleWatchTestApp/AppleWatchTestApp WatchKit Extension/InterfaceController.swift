@@ -60,10 +60,13 @@ class InterfaceController: WKInterfaceController, SwingProtocol {
     func onReady() {
         print("Ready")
     }
-    
-    func onSwing() {
+    func onSwing(dataList: [MotionData]) {
         print("onSwing")
+        dataList.forEach({ data in
+            data.printLog()
+        })
     }
+    
 //  ===========================================================
 //  ===========================================================
 }

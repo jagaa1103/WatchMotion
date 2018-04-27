@@ -31,6 +31,7 @@
 		35AA8A8B20521E30008AC88E /* MotionSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA8A8A20521E30008AC88E /* MotionSceneController.swift */; };
 		35B618982090735A001AB046 /* SwingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B618922090735A001AB046 /* SwingManager.swift */; };
 		35B6189A20907820001AB046 /* SwingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6189920907820001AB046 /* SwingProtocol.swift */; };
+		35E6BCE52091BBC700A5CADB /* SwingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E6BCE42091BBC700A5CADB /* SwingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		35AA8A8A20521E30008AC88E /* MotionSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSceneController.swift; sourceTree = "<group>"; };
 		35B618922090735A001AB046 /* SwingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingManager.swift; sourceTree = "<group>"; };
 		35B6189920907820001AB046 /* SwingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingProtocol.swift; sourceTree = "<group>"; };
+		35E6BCE42091BBC700A5CADB /* SwingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 			children = (
 				35B618922090735A001AB046 /* SwingManager.swift */,
 				35B6189920907820001AB046 /* SwingProtocol.swift */,
+				35E6BCE42091BBC700A5CADB /* SwingState.swift */,
 			);
 			path = Swing;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 			files = (
 				35B6189A20907820001AB046 /* SwingProtocol.swift in Sources */,
 				358BA1BF204E32E000A6EAFB /* NotificationController.swift in Sources */,
+				35E6BCE52091BBC700A5CADB /* SwingState.swift in Sources */,
 				358BA1BD204E32E000A6EAFB /* ExtensionDelegate.swift in Sources */,
 				358BA1BB204E32E000A6EAFB /* InterfaceController.swift in Sources */,
 				350A250620539345004E6D11 /* ConnectionService.swift in Sources */,
