@@ -8,11 +8,54 @@
 
 import CoreMotion
 
+public struct Accel: Codable {
+    public var x: Double
+    public var y: Double
+    public var z: Double
+    
+    init(data: CMAcceleration) {
+        x = data.x
+        y = data.y
+        z = data.z
+    }
+}
 
-public struct MotionData {
-    public var accel: CMAcceleration
-    public var gyro: CMRotationRate
-    public var quaternion: CMQuaternion
+public struct Gyro: Codable {
+    public var x: Double
+    public var y: Double
+    public var z: Double
+    
+    init(data: CMRotationRate) {
+        x = data.x
+        y = data.y
+        z = data.z
+    }
+}
+
+public struct Quaternion: Codable {
+    public var x: Double
+    public var y: Double
+    public var z: Double
+    public var w: Double
+    
+    init(data: CMQuaternion) {
+        x = data.x
+        y = data.y
+        z = data.z
+        w = data.w
+    }
+}
+
+
+public struct MotionData: Codable {
+    public var accel: Accel
+    public var gyro: Gyro
+    public var quaternion: Quaternion
+    init(_accel: CMAcceleration, _gyro: CMRotationRate, _quater: CMQuaternion) {
+        accel = Accel(data: _accel)
+        gyro = Gyro(data: _gyro)
+        quaternion = Quaternion(data: _quater)
+    }
     public func printLog(){
         print("ax: \(accel.x), ay: \(accel.y), az: \(accel.z), gx: \(gyro.x), gy: \(gyro.y), gz: \(gyro.z), qx: \(quaternion.x), qy: \(quaternion.y),qz: \(quaternion.z),qw: \(quaternion.w)")
     }

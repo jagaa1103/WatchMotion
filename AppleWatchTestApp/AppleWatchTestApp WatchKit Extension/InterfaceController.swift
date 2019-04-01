@@ -60,11 +60,13 @@ class InterfaceController: WKInterfaceController, SwingProtocol {
     func onReady() {
         print("Ready")
     }
-    func onSwing(dataList: [MotionData]) {
+    func onSwing(dataList: String) {
         print("onSwing")
-        dataList.forEach({ data in
-            data.printLog()
-        })
+        do {
+            try connectionService.sendToPhone(header: "onSwing", message: dataList)
+        } catch {
+            print("ERROR >> onSwing >> sendToPhone")
+        }
     }
     
 //  ===========================================================

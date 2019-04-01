@@ -104,4 +104,16 @@ public class SwingManager : MotionProtocol {
         }
         swingData.append(data)
     }
+    
+    func toJSON(data: MotionData) -> String {
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(data)
+            return String(data: jsonData, encoding: .utf8)!
+        } catch {
+            print("toJSON error")
+            return ""
+        }
+        return ""
+    }
 }

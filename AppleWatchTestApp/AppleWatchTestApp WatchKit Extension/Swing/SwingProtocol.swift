@@ -10,5 +10,5 @@ import watchOSMotion
 
 protocol SwingProtocol {
     func onReady()
-    func onSwing(dataList: [MotionData])
+    func onSwing(dataList: String)
 }

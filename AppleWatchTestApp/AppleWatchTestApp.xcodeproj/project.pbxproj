@@ -11,8 +11,6 @@
 		350A250620539345004E6D11 /* ConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A250520539345004E6D11 /* ConnectionService.swift */; };
 		3559C6692053AC08002AED86 /* MotionScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3559C6682053AC08002AED86 /* MotionScene.scn */; };
 		355FB354206F60B00056BF44 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355FB353206F60B00056BF44 /* HealthKit.framework */; };
-		356E360720512E9F002E25FF /* watchOSMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356E360620512E9F002E25FF /* watchOSMotion.framework */; };
-		356E360820512E9F002E25FF /* watchOSMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 356E360620512E9F002E25FF /* watchOSMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		358BA182204E32E000A6EAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA181204E32E000A6EAFB /* AppDelegate.swift */; };
 		358BA184204E32E000A6EAFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BA183204E32E000A6EAFB /* ViewController.swift */; };
 		358BA187204E32E000A6EAFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358BA185204E32E000A6EAFB /* Main.storyboard */; };
@@ -31,6 +29,8 @@
 		35AA8A8B20521E30008AC88E /* MotionSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA8A8A20521E30008AC88E /* MotionSceneController.swift */; };
 		35B618982090735A001AB046 /* SwingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B618922090735A001AB046 /* SwingManager.swift */; };
 		35B6189A20907820001AB046 /* SwingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B6189920907820001AB046 /* SwingProtocol.swift */; };
+		35D52B5F20ABF2CC00B06E0B /* watchOSMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D52B5E20ABF2CC00B06E0B /* watchOSMotion.framework */; };
+		35D52B6020ABF2CC00B06E0B /* watchOSMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35D52B5E20ABF2CC00B06E0B /* watchOSMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35E6BCE52091BBC700A5CADB /* SwingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E6BCE42091BBC700A5CADB /* SwingState.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +66,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3568742720ABF24800A64B8B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		358BA1C9204E32E000A6EAFB /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,7 +104,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				356E360820512E9F002E25FF /* watchOSMotion.framework in Embed Frameworks */,
+				35D52B6020ABF2CC00B06E0B /* watchOSMotion.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +117,6 @@
 		3559C6682053AC08002AED86 /* MotionScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = MotionScene.scn; sourceTree = "<group>"; };
 		355FB351206F60B00056BF44 /* AppleWatchTestApp WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AppleWatchTestApp WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		355FB353206F60B00056BF44 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		356E360620512E9F002E25FF /* watchOSMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = watchOSMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		358BA17E204E32E000A6EAFB /* AppleWatchTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		358BA181204E32E000A6EAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		358BA183204E32E000A6EAFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +144,7 @@
 		35AA8A8A20521E30008AC88E /* MotionSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSceneController.swift; sourceTree = "<group>"; };
 		35B618922090735A001AB046 /* SwingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingManager.swift; sourceTree = "<group>"; };
 		35B6189920907820001AB046 /* SwingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingProtocol.swift; sourceTree = "<group>"; };
+		35D52B5E20ABF2CC00B06E0B /* watchOSMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = watchOSMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E6BCE42091BBC700A5CADB /* SwingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				356E360720512E9F002E25FF /* watchOSMotion.framework in Frameworks */,
+				35D52B5F20ABF2CC00B06E0B /* watchOSMotion.framework in Frameworks */,
 				355FB354206F60B00056BF44 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +201,7 @@
 		358BA175204E32E000A6EAFB = {
 			isa = PBXGroup;
 			children = (
-				356E360620512E9F002E25FF /* watchOSMotion.framework */,
+				35D52B5E20ABF2CC00B06E0B /* watchOSMotion.framework */,
 				358BA180204E32E000A6EAFB /* AppleWatchTestApp */,
 				358BA195204E32E000A6EAFB /* AppleWatchTestAppTests */,
 				358BA1A0204E32E000A6EAFB /* AppleWatchTestAppUITests */,
@@ -303,6 +313,7 @@
 				358BA17B204E32E000A6EAFB /* Frameworks */,
 				358BA17C204E32E000A6EAFB /* Resources */,
 				358BA1CD204E32E000A6EAFB /* Embed Watch Content */,
+				3568742720ABF24800A64B8B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -784,7 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phigolf.watchOSMotion.AppleWatchTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -800,7 +811,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phigolf.watchOSMotion.AppleWatchTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

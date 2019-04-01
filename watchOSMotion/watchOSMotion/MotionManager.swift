@@ -49,7 +49,7 @@ class MotionManager{
         motionManager.deviceMotionUpdateInterval = 0.01
         motionManager.startDeviceMotionUpdates(to: OperationQueue.main) { (motionData: CMDeviceMotion?, error: Error?) in
             if error == nil, let data = motionData {
-                let sensorData = MotionData(accel: data.gravity, gyro: data.rotationRate, quaternion: data.attitude.quaternion)
+                let sensorData = MotionData(_accel: data.gravity, _gyro: data.rotationRate, _quater: data.attitude.quaternion)
                 self.delegate?.onMotionChanged(data: sensorData)
             }
         }
